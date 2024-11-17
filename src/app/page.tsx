@@ -24,7 +24,7 @@ export default function Home() {
           <button className="text-center text-4xl bg-green-600 hover:bg-green-700 text-white font-bold p-4 mt-4 rounded-lg"><a href="/cadastro">Cadastre-se</a></button>
         </div>
         <div className="flex flex-col lg:flex-row lg:gap-24 items-center justify-evenly lg:mt-16">
-          <p className="w-9/12 lg:w-[75vw] xl:w-[75vw] text-center text-white bg-green-700 bg-opacity-80 p-4 rounded-lg text-lg sm:text-xl md:text-2xl mb-6"> {/* Ajustado o mb-12 para mb-6 */}
+          <p className="w-9/12 lg:w-[75vw] xl:w-[75vw] text-center text-white bg-green-700 bg-opacity-80 p-4 rounded-lg text-lg sm:text-xl md:text-2xl mb-6">
             Descubra uma nova forma de economizar energia e adotar práticas sustentáveis com nossa plataforma por assinatura! Ao participar, você será incentivado a reduzir seu consumo energético, aprender sobre tecnologias limpas e contribuir para um futuro mais verde. Por meio de atividades práticas validadas por evidências, você acumula pontos que podem ser trocados por recompensas sustentáveis, como dispositivos de baixo consumo. Além disso, monitore seu progresso, participe de uma comunidade engajada na sustentabilidade energética e faça parte da mudança que o mundo precisa. Junte-se a nós e transforme sua rotina em uma oportunidade de cuidar do planeta!
           </p>
         </div>
