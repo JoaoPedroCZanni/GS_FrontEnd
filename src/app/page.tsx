@@ -16,14 +16,14 @@ export default function Home() {
       
       <div className="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>
 
-      <div className="relative z-10 flex flex-col items-center">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold underline text-center p-8 text-white">
+      <div className="relative flex flex-col items-center -z-5">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold underline text-center p-8 text-white">
           Green Change
         </h1>
         <div>
-          <button className="text-center text-4xl bg-green-600 hover:bg-green-700 text-white font-bold p-4 mt-4 rounded-lg"><a href="/cadastro">Cadastre-se</a></button>
+          <button className="text-center text-3xl bg-green-600 hover:bg-green-700 text-white font-bold p-4 mt-4 mb-8 rounded-lg"><a href="/cadastro">Cadastre-se</a></button>
         </div>
-        <div className="flex flex-col lg:flex-row lg:gap-24 items-center justify-evenly lg:mt-16">
+        <div className="flex flex-col lg:flex-row lg:gap-24 items-center justify-evenly">
           <p className="w-9/12 lg:w-[75vw] xl:w-[75vw] text-center text-white bg-green-700 bg-opacity-80 p-4 rounded-lg text-lg sm:text-xl md:text-2xl mb-6">
             Descubra uma nova forma de economizar energia e adotar práticas sustentáveis com nossa plataforma por assinatura! Ao participar, você será incentivado a reduzir seu consumo energético, aprender sobre tecnologias limpas e contribuir para um futuro mais verde. Por meio de atividades práticas validadas por evidências, você acumula pontos que podem ser trocados por recompensas sustentáveis, como dispositivos de baixo consumo. Além disso, monitore seu progresso, participe de uma comunidade engajada na sustentabilidade energética e faça parte da mudança que o mundo precisa. Junte-se a nós e transforme sua rotina em uma oportunidade de cuidar do planeta!
           </p>

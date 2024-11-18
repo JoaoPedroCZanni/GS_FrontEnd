@@ -11,7 +11,7 @@ export default function Menu() {
     };
 
     return (
-        <nav className="relative">
+        <nav className="relative z-50">
             <div className="flex items-center justify-between p-4">
                 {/* Botão de menu hamburguer visível apenas em telas menores que 640px */}
                 <button 
