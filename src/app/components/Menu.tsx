@@ -39,7 +39,7 @@ export default function Menu() {
                     <li className="hover:text-green-400"><Link href="/">Home</Link></li>
                     <li className="hover:text-green-400"><Link href="/cadastro">Cadastro</Link></li>
                     <li className="hover:text-green-400"><Link href="/atividades">Atividades</Link></li>
-                    <li className="hover:text-green-400"><Link href="/pgInt">Página de Integrantes</Link></li>
+                    <li className="hover:text-green-400"><Link href="/integrantes">Página de Integrantes</Link></li>
                     <li className="hover:text-green-400"><Link href="/contato">Contato</Link></li>       
                 </ul>
             </div>
