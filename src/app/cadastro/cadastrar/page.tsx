@@ -1,7 +1,9 @@
 "use client"
 import { Toaster, toast } from "react-hot-toast";
+import { useUserContext } from "./../../context/UserContext"
 
 export default function Cadastrar() {
+    const { addUser } = useUserContext()
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,6 +44,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         return;
     };
 
+    addUser({ cpf, nome, email, senha, cep, formaPagamento, statusPagamento })
     toast.success("Usuário cadastrado com sucesso!")
     form.reset()
 }
