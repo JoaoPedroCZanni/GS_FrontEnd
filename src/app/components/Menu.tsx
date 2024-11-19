@@ -35,10 +35,11 @@ export default function Menu() {
                 </button>
 
                 {/* Menu normal visível apenas em telas maiores que 640px */}
-                <ul className="hidden md:flex gap-16 links text-white font-semibold text-lg">
+                <ul className="hidden md:flex gap-10 lg:gap-16 links text-white font-semibold text-xs lg:text-sm xl:text-lg">
                     <li className="hover:text-green-400"><Link href="/">Home</Link></li>
                     <li className="hover:text-green-400"><Link href="/cadastro">Cadastro</Link></li>
                     <li className="hover:text-green-400"><Link href="/atividades">Atividades</Link></li>
+                    <li className="hover:text-green-400"><Link href="/recompensas">Recompensas</Link></li>
                     <li className="hover:text-green-400"><Link href="/integrantes">Página de Integrantes</Link></li>
                     <li className="hover:text-green-400"><Link href="/contato">Contato</Link></li>       
                 </ul>
@@ -52,6 +53,12 @@ export default function Menu() {
                     </li>
                     <li className="mb-4">
                         <Link href="/cadastro" className="text-white font-semibold hover:text-green-400 text-sm sm:text-base" onClick={toggleMenu}>Cadastro</Link>
+                    </li>
+                    <li className="mb-4">
+                        <Link href="/atividades" className="text-white font-semibold hover:text-green-400 text-sm sm:text-base" onClick={toggleMenu}>Atividades</Link>
+                    </li>
+                    <li className="mb-4">
+                        <Link href="/recompensas" className="text-white font-semibold hover:text-green-400 text-sm sm:text-base" onClick={toggleMenu}>Recompensas</Link>
                     </li>
                     <li className="mb-4">
                         <Link href="/pgInt" className="text-white font-semibold hover:text-green-400 text-sm sm:text-base" onClick={toggleMenu}>Página de Integrantes</Link>
