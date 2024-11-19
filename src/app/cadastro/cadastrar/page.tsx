@@ -2,9 +2,9 @@ export default function Cadastrar() {
     return (
         <div>
             <div className="flex flex-col items-center mb-6">
-                <h1 className='text-center my-6 pt-2 text-[3vw] md:text-4xl lg:text-5xl font-bold'>Cadastre seu Usuário!</h1>
+                <h1 className='text-center my-6 pt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>Cadastre seu Usuário!</h1>
                 <section className='m-5 w-full flex justify-center'>
-                    <form className="flex flex-col w-[25vw] md:w-[300px] lg:w-[440px] bg-gray-200 rounded-lg p-5">
+                    <form className="flex flex-col w-[80vw] sm:w-[50vw] lg:w-[30vw] bg-gray-200 rounded-lg p-5">
                         <fieldset className="border-none flex flex-col">
                             <legend className="p-4 text-2xl font-bold text-center">Informações do Usuário</legend>
                             <label className="pt-2 pb-2 block">
