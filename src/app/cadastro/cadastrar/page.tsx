@@ -3,7 +3,7 @@ import { Toaster, toast } from "react-hot-toast";
 import { useUserContext } from "./../../context/UserContext"
 
 export default function Cadastrar() {
-    const { addUser } = useUserContext()
+const { addUser } = useUserContext()
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

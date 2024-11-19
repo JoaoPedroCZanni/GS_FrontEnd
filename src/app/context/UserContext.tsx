@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 type User = {
     cpf: string;
@@ -14,6 +14,8 @@ type User = {
 type UserContextType = {
     users: User[];
     addUser: (user: User) => void;
+    removeUser: (cpf: string) => void
+    putUser: (index: number, updatedUser: User) => void
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -21,12 +23,33 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 export const UserProvider = ({ children }: { children: ReactNode }) => {
     const [users, setUsers] = useState<User[]>([])
 
+    useEffect(() => {
+        const storedUsers = localStorage.getItem('users')
+        if (storedUsers) {
+            setUsers(JSON.parse(storedUsers))
+        }
+    }, [])
+
     const addUser = (user: User) => {
-        setUsers((prevUsers) => [...prevUsers, user])
+        const updatedUsers = [...users, user]
+        setUsers(updatedUsers)
+        localStorage.setItem('users', JSON.stringify(updatedUsers))
+    }
+
+    const putUser = (index: number, updatedUser: User) => {
+        setUsers((prevUsers) => 
+            prevUsers.map((user, i) => (i === index ? updatedUser : user))
+        )
+    }
+
+    const removeUser = (cpf: string) => {
+        const updatedUsers = users.filter((user) => user.cpf !== cpf)
+        setUsers(updatedUsers)
+        localStorage.setItem('users', JSON.stringify(updatedUsers))
     }
 
     return(
-        <UserContext.Provider value={{ users, addUser }}>
+        <UserContext.Provider value={{ users, addUser, putUser, removeUser }}>
             {children}
         </UserContext.Provider>
     )

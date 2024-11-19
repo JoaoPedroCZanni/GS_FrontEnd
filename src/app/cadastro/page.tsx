@@ -1,9 +1,20 @@
 "use client"
-import { table } from "console";
 import { useUserContext } from "./../context/UserContext"
+import { useState } from "react";
+import ModalCadastro from "../components/ModalCadastro";
 
 export default function Cadastro() {
-    const { users } = useUserContext();
+    const { users, removeUser } = useUserContext();
+    const [isEditOpen, setEditOpen] = useState(false);
+    const [selectedUserIndex, setSelectedUserIndex] = useState<number | null>(null);
+
+    const handleEdit = (cpf: string) =>{
+        const userIndex = users.findIndex((user) => user.cpf === cpf);
+        if (userIndex !== -1) {
+            setSelectedUserIndex(userIndex);
+            setEditOpen(true);
+        }
+    }
 
     return(
         <div className="flex flex-col items-center">
@@ -32,6 +43,8 @@ export default function Cadastro() {
                                 <td className="border border-gray-400 px-4 py-2">{user.cep}</td>
                                 <td className="border border-gray-400 px-4 py-2">{user.formaPagamento}</td>
                                 <td className="border border-gray-400 px-4 py-2">{user.statusPagamento}</td>
+                                <td className="border border-gray-400 px-4 py-2"><button onClick={() => removeUser(user.cpf)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Excluir</button></td>
+                                <td className="border border-gray-400 px-4 py-2"><button onClick={() => handleEdit(user.cpf)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</button></td>
                             </tr>
                         ))}
                     </tbody>
@@ -40,6 +53,7 @@ export default function Cadastro() {
                 <p className="text-gray-500 my-6">Nenhum usuário cadastrado.</p>
             )}
             <button className="text-center text-lg bg-green-600 hover:bg-green-700 text-white font-bold p-3 rounded-lg m-12"><a href="/cadastro/cadastrar">Adicionar cadastro</a></button>
+            <ModalCadastro isOpen={isEditOpen} onClose={() => setEditOpen(false)} userIndex={selectedUserIndex} />
         </div>
     )
 }
