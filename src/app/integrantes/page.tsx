@@ -10,7 +10,7 @@ export default function Integrantes() {
             <h2 className="text-center my-2 sm:my-6 text-xl sm:text-2xl">REPOSITÓRIO</h2>
             <div className="text-center mb-6">
                 <p>
-                    <a href="https://github.com/JoaoPedroCZanni/GS_FrontEnd" target="_blank" rel="noopener noreferrer" className="text-blue-500 no-underline sm:text-xl lg:2xl">https://github.com/JoaoPedroCZanni/GS_FrontEnd</a>
+                    <a href="https://github.com/JoaoPedroCZanni/GS_FrontEnd" target="_blank" className="text-blue-500 no-underline sm:text-xl lg:2xl">https://github.com/JoaoPedroCZanni/GS_FrontEnd</a>
                 </p>
             </div>
             <div className="flex flex-col lg:flex-row justify-evenly mt-6 mb-20 gap-16 lg:gap-24 xl:gap-52">
