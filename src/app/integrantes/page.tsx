@@ -20,7 +20,7 @@ export default function Integrantes() {
                         Nome: Lucas Lerri de Almeida<br />
                         RM: 554635<br />
                         Turma: 1TDSPI<br />
-                        <a href="https://github.com/lerri05" className="text-blue-500 no-underline">https://github.com/lerri05</a>
+                        <a href="https://github.com/lerri05" className="text-blue-500 no-underline" target='_blank'>https://github.com/lerri05</a>
                     </p>
                 </section>
                 <section className="text-center flex flex-col items-center">
@@ -28,7 +28,7 @@ export default function Integrantes() {
                     <p className="mt-2 underline text-lg sm:text-2xl lg:text-lg"> João Pedro C. Zanni<br />
                         RM: 557591<br />
                         Turma: 1TDSPI<br />
-                        <a href="https://github.com/JoaoPedroCZanni" className="text-blue-500 no-underline">https://github.com/JoaoPedroCZanni</a>
+                        <a href="https://github.com/JoaoPedroCZanni" className="text-blue-500 no-underline" target='_blank'>https://github.com/JoaoPedroCZanni</a>
                     </p>
                 </section>
                 <section className="text-center flex flex-col items-center">
@@ -36,7 +36,8 @@ export default function Integrantes() {
                     <p className="mt-2 underline text-lg sm:text-2xl lg:text-lg"> Rafael Bompadre Lima<br />
                         RM: 556459<br />
                         Turma: 1TDSPH<br />
-                        <a href="https://github.com/Rafa130206" className="text-blue-500 no-underline">https://github.com/Rafa130206</a>
+                        <a href="https://github.com/Rafa130206" className="text-blue-500 no-underline" target='_blank'>https://github.com/Rafa130206</a> <br />
+                        <a href="https://www.linkedin.com/in/rafael-bompadre-lima" className='text-blue-500 no-underline' target='_blank'>https://www.linkedin.com/in/rafael-bompadre-lima</a>
                     </p>
                 </section>
             </div>
