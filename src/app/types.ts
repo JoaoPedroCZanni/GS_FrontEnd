@@ -13,3 +13,10 @@ export type TipoAtividade = {
     descricao: string;
     pontos_recompensa: number;
 }
+
+export type TipoRecompensa = {
+    $id: number;
+    nm_recompensa: string;
+    descricao: string;
+    pontos_necessarios: number;
+}
