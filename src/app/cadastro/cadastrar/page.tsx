@@ -2,7 +2,7 @@
 import { Toaster, toast } from "react-hot-toast";
 import { useUserContext } from "./../../context/UserContext"
 import { TipoUsuario } from "../../types"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Cadastrar() {
 const [usuarios, setUsuarios] = useState<TipoUsuario[]>([])
@@ -20,6 +20,10 @@ const consumindoApiUsuarios = async () => {
         console.log("Erro ao buscar usuários:", error)
     }
 }
+
+useEffect(() => {
+    consumindoApiUsuarios()
+}, [])
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
