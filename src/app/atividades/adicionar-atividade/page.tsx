@@ -1,22 +1,53 @@
 "use client"
 import { Toaster, toast } from "react-hot-toast";
+import { useAtividadeContext } from "../../context/AtividadeContext"
+import { TipoAtividade } from "../../types"
+import { useEffect, useState } from "react"
 
 export default function AdicionarAtividade() {
+const [atividades, setAtividades] = useState<TipoAtividade[]>([])
+const { addAtividade } = useAtividadeContext()
+
+const consumindoApiAtividades = async () => {
+    try {
+        const response = await fetch('http://localhost:3000/api/base-atividades')
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json()
+        setAtividades(data)
+    } catch (error) {
+        console.log("Erro ao buscar atividades:", error)
+    }
+}
+
+useEffect(() => {
+    consumindoApiAtividades()
+}, [])
+
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = e.target as HTMLFormElement
-    const descricao = form.descricao.value.trim()
-    const pontos = form.pontos.value.trim()
+    const form = e.target as HTMLFormElement;
+    const descricao = form.descricao.value.trim();
+    const pontos_recompensa = form.pontos_recompensa.value.trim();
 
-    if (!descricao || !pontos) {
-        toast.error("Por favor, preencha todos os campos.")
+    if (!descricao || !pontos_recompensa) {
+        toast.error("Por favor, preencha todos os campos.");
         return;
     }
 
-    toast.success("Atividade adicionada com sucesso!")
-    form.reset()
-}
+    if (Number(pontos_recompensa) <= 0) {
+        toast.error("Por favor, insira um valor maior que zero.");
+        return;
+    }
+
+    // Chamar addAtividade sem precisar do ID
+    addAtividade({ descricao, pontos_recompensa: Number(pontos_recompensa) });
+    toast.success("Atividade adicionada com sucesso!");
+    form.reset();
+};
+
 
     return (
         <div>
@@ -33,7 +64,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                                 <input type="text" name="descricao" id="iddescricao" placeholder='Insira a descrição da atividade' className="text-lg w-full p-1 rounded-md border-none" />
                             </label>
                             <label className="pt-2 pb-2 block">
-                                <input type="number" name='pontos' id='idpontos' placeholder='Insira o valor de pontos dessa atividade' className="text-lg w-full p-1 rounded-md border-none" />
+                                <input type="number" name='pontos_recompensa' id='idpontos' placeholder='Insira o valor de pontos dessa atividade' className="text-lg w-full p-1 rounded-md border-none" />
                             </label>
                         </fieldset>
                         <button type='submit' className="mt-4 mb-6 text-xl p-2 rounded-lg bg-gray-400 hover:bg-gray-600 text-white cursor-pointer">Enviar</button>
