@@ -14,9 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="flex flex-col min-h-screen"> {/* Adicionei aqui */}
+      <body className="flex flex-col min-h-screen">
         <Cabecalho />
-        <div className="flex-grow"> {/* Contêiner para o conteúdo principal */}
+        <div className="flex-grow"> 
           {children}
         </div>
         <Rodape />

@@ -2,6 +2,7 @@
 import { useRecompensaContext } from "../context/RecompensaContext"
 import { useState } from "react"
 import ModalRecompensa from "../components/ModalRecompensa"
+import Link from "next/link"
 
 export default function Atividades() {
     const { recompensas, removeRecompensa } = useRecompensaContext()
@@ -18,6 +19,7 @@ export default function Atividades() {
     
     return(
         <div className="flex flex-col items-center">
+
             <h1 className="text-center my-6 pt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Recompensas</h1>
 
             {recompensas.length > 0 ? (
@@ -45,7 +47,7 @@ export default function Atividades() {
                 <p>Nenhuma recompensa encontrada.</p>
             )}
 
-            <button className="text-center text-lg bg-green-600 hover:bg-green-700 text-white font-bold p-3 rounded-lg m-12"><a href="/recompensas/adicionar-recompensa">Adicionar recompensa</a></button>
+            <button className="text-center text-lg bg-green-600 hover:bg-green-700 text-white font-bold p-3 rounded-lg m-12"><Link href="/recompensas/adicionar-recompensa">Adicionar recompensa</Link></button>
             <ModalRecompensa isOpen={isEditOpen} onClose={() => setIsEditOpen(false)} recompensaIndex={SelectedRecompensaIndex} />
         </div>
     )
