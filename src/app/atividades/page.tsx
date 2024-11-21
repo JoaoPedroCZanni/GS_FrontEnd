@@ -2,6 +2,7 @@
 import { useAtividadeContext } from "../context/AtividadeContext"
 import { useState } from "react"
 import ModalAtividade from "../components/ModalAtividade"
+import Pontuacao from "../components/Pontuacao"
 
 export default function Atividades() {
     const { atividades, removeAtividade } = useAtividadeContext()
@@ -19,6 +20,7 @@ export default function Atividades() {
     return(
         <div className="flex flex-col items-center">
             <h1 className="text-center my-6 pt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Atividades</h1>
+            <Pontuacao/>
 
             {atividades.length > 0 ? (
                 <table className="table-auto border-collapse border border-gray-400 my-6">

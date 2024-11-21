@@ -1,9 +1,12 @@
 import { UserProvider } from "../context/UserContext"
+import { PontuacaoProvider } from "../context/PontuacaoContext"
 
 export default function CadastroLayout({ children }: { children: React.ReactNode }) {
     return (
         <UserProvider>
-            {children}
+            <PontuacaoProvider>
+                {children}
+            </PontuacaoProvider>
         </UserProvider>
     )
 }

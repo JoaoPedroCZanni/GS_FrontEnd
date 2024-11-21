@@ -2,6 +2,7 @@
 import { useUserContext } from "./../context/UserContext"
 import { useState } from "react";
 import ModalCadastro from "../components/ModalCadastro";
+import Pontuacao from "../components/Pontuacao";
 
 export default function Cadastro() {
     const { users, removeUser } = useUserContext();
@@ -19,7 +20,7 @@ export default function Cadastro() {
     return(
         <div className="flex flex-col items-center">
             <h1 className="text-center my-6 pt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Cadastre-se!</h1>
-            
+            <Pontuacao/>
             {users.length > 0 ? (
                 <table className="table-auto border-collapse border border-gray-400 my-6">
                     <thead>

@@ -1,12 +1,12 @@
 "use client";
-import { usePontosContext } from "../context/PontuacaoContext";
+import { usePontuacaoContext } from "../context/PontuacaoContext";
 
-export default function PontosHeader() {
-  const { pontos } = usePontosContext();
+export default function Pontuacao() {
+  const { pontuacao } = usePontuacaoContext();
 
   return (
-    <div className="fixed top-4 right-4 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
-      Pontos: {pontos}
+    <div className="absolute top-[65px] left-4 bg-green-800 text-white font-bold mt-12 py-2 px-4 rounded-lg shadow-lg">
+      Pontos: {pontuacao}
     </div>
   );
 }
