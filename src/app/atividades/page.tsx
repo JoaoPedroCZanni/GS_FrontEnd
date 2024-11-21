@@ -35,7 +35,7 @@ export default function Atividades() {
                                 <td className="border border-gray-400 px-4 py-2">{atividade.pontos_recompensa}</td>
                                 <td className="border border-gray-400 px-4 py-2"><button onClick={() => removeAtividade(atividade.id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Remover</button></td>
                                 <td className="border border-gray-400 px-4 py-2"><button onClick={() => handleEdit(atividade.id)} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Editar</button></td>
-                                <td className="border border-gray-400 px-4 py-2"><button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"><a href="/concluir"></a></button></td>
+                                <td className="border border-gray-400 px-4 py-2"><button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"><a href="/concluir">Concluir</a></button></td>
                             </tr>
                         ))}
                     </tbody>
