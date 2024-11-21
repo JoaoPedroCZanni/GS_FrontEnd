@@ -20,7 +20,8 @@ export default function Integrantes() {
                         Nome: Lucas Lerri de Almeida<br />
                         RM: 554635<br />
                         Turma: 1TDSPI<br />
-                        <a href="https://github.com/lerri05" className="text-blue-500 no-underline" target='_blank'>https://github.com/lerri05</a>
+                        <a href="https://github.com/lerri05" className="text-blue-500 no-underline" target='_blank'>https://github.com/lerri05</a> <br />
+                        <a href="https://www.linkedin.com/in/lucas-lerri-a78b32238/" className='text-blue-500 no-underline' target='_blank'>https://www.linkedin.com/in/lucas-lerri-a78b32238/</a>
                     </p>
                 </section>
                 <section className="text-center flex flex-col items-center">
@@ -28,7 +29,8 @@ export default function Integrantes() {
                     <p className="mt-2 underline text-lg sm:text-2xl lg:text-lg"> João Pedro C. Zanni<br />
                         RM: 557591<br />
                         Turma: 1TDSPI<br />
-                        <a href="https://github.com/JoaoPedroCZanni" className="text-blue-500 no-underline" target='_blank'>https://github.com/JoaoPedroCZanni</a>
+                        <a href="https://github.com/JoaoPedroCZanni" className="text-blue-500 no-underline" target='_blank'>https://github.com/JoaoPedroCZanni</a> <br />
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-curcino-zanni-b25a2929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className='text-blue-500 no-underline' target='_blank'>https://www.linkedin.com/in/joao-pedro-curcino-zanni</a>
                     </p>
                 </section>
                 <section className="text-center flex flex-col items-center">
