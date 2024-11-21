@@ -20,3 +20,11 @@ export type TipoRecompensa = {
     descricao: string;
     pontos_necessarios: number;
 }
+
+export type TipoEvidenvia = {
+    $id: number;
+    ipo_evidencia: string;
+    url_arquivo: string;
+    data_envio: string;
+    status_evidencia: string;
+}
