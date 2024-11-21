@@ -7,3 +7,9 @@ export type TipoUsuario = {
     $forma_pagamento: string;
     $status_pagamento: string;
 }
+
+export type TipoAtividade = {
+    $id: number;
+    descricao: string;
+    pontos_recompensa: number;
+}
