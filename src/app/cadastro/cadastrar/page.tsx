@@ -1,9 +1,25 @@
 "use client"
 import { Toaster, toast } from "react-hot-toast";
 import { useUserContext } from "./../../context/UserContext"
+import { TipoUsuario } from "../../types"
+import { useState } from "react";
 
 export default function Cadastrar() {
+const [usuarios, setUsuarios] = useState<TipoUsuario[]>([])
 const { addUser } = useUserContext()
+
+const consumindoApiUsuarios = async () => {
+    try {
+        const response = await fetch('http://localhost:3000/api/base-usuarios')
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json()
+        setUsuarios(data)
+    } catch (error) {
+        console.log("Erro ao buscar usuários:", error)
+    }
+}
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
