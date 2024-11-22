@@ -15,7 +15,7 @@ export default function Integrantes() {
             </div>
             <div className="flex flex-col lg:flex-row justify-evenly mt-6 mb-20 gap-16 lg:gap-24 xl:gap-52">
                 <section className="text-center flex flex-col items-center">
-                    <Image src={Lucas} alt="Lucas" className="w-7/12 sm:w-5/12 lg:w-[15vw] shadow-lg" />
+                    <Image src={Lucas} alt=" Lucas" className="w-7/12 sm:w-5/12 lg:w-[15vw] shadow-lg" />
                     <p className="mt-2 underline text-lg sm:text-2xl lg:text-lg">
                         Nome: Lucas Lerri de Almeida<br />
                         RM: 554635<br />
